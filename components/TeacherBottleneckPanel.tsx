@@ -13,13 +13,17 @@ interface TeacherBottleneckPanelProps {
 
 export function TeacherBottleneckPanel({ analytics }: TeacherBottleneckPanelProps) {
   return (
-    <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-card">
+    <section className="rounded-[2rem] border border-slate-200/80 bg-white/90 p-6 shadow-card">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">Bottlenecks</p>
+          <p className="text-sm font-medium uppercase tracking-[0.22em] text-cyan-700">Teaching signals</p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">
-            Where students need support
+            Where students are most likely to need support
           </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-500">
+            These nodes are drawing the most friction. Scan here first when deciding where to reteach,
+            pause, or check for a shared misconception.
+          </p>
         </div>
       </div>
 
@@ -40,7 +44,7 @@ export function TeacherBottleneckPanel({ analytics }: TeacherBottleneckPanelProp
                 <td className="py-4 pr-4 font-medium text-slate-900">{item.node_title}</td>
                 <td className="py-4 pr-4">{item.students_on_node}</td>
                 <td className="py-4 pr-4">{item.incorrect_attempts}</td>
-                <td className="py-4 pr-4">{item.misconception_code ?? "None tagged"}</td>
+                <td className="py-4 pr-4">{item.misconception_code ?? "No clear pattern tagged yet"}</td>
                 <td className="py-4">{formatRelativeTime(item.active_recently_at)}</td>
               </tr>
             ))}

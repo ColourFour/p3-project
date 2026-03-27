@@ -6,8 +6,8 @@ import "@/app/globals.css";
 import { getAuthContext } from "@/lib/auth";
 
 export const metadata: Metadata = {
-  title: "Branching Classroom MVP",
-  description: "A production-minded MVP for branching math lessons."
+  title: "Branching Classroom",
+  description: "An interactive lesson prototype for branching math challenges."
 };
 
 export default async function RootLayout({
@@ -21,20 +21,20 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         <div className="min-h-screen">
-          <header className="border-b border-sky-200/80 bg-white/80 backdrop-blur">
+          <header className="border-b border-white/70 bg-white/70 backdrop-blur">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-              <Link href="/" className="text-lg font-semibold tracking-tight">
+              <Link href="/" className="text-lg font-semibold tracking-tight text-slate-950">
                 Branching Classroom
               </Link>
               <div className="flex items-center gap-3 text-sm text-slate-600">
                 {auth ? (
                   <>
                     <span>{auth.profile.display_name}</span>
-                    <span className="rounded-full bg-sky-100 px-3 py-1 font-medium text-sky-700">
+                    <span className="rounded-full bg-cyan-100 px-3 py-1 font-medium text-cyan-800">
                       {auth.role}
                     </span>
                     <form action="/api/logout" method="post">
-                      <button className="rounded-full border border-slate-200 px-3 py-1.5 font-medium hover:border-slate-300">
+                      <button className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 font-medium hover:border-slate-300">
                         Sign out
                       </button>
                     </form>
@@ -42,7 +42,7 @@ export default async function RootLayout({
                 ) : (
                   <Link
                     href="/login"
-                    className="rounded-full border border-slate-200 px-3 py-1.5 font-medium hover:border-slate-300"
+                    className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 font-medium hover:border-slate-300"
                   >
                     Sign in
                   </Link>
@@ -50,7 +50,7 @@ export default async function RootLayout({
               </div>
             </div>
           </header>
-          <main className="mx-auto max-w-7xl px-6 py-8">{children}</main>
+          <main className="mx-auto max-w-7xl px-6 py-8 md:py-10">{children}</main>
         </div>
       </body>
     </html>

@@ -74,18 +74,21 @@ export function AnswerInput({ assignmentId, nodePayload }: AnswerInputProps) {
   };
 
   return (
-    <div className="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-card">
+    <div className="space-y-4 rounded-[2rem] border border-slate-200/80 bg-white/95 p-6 shadow-card">
       <div className="flex items-center justify-between text-sm text-slate-500">
         <span className="font-medium capitalize">{nodeType.replaceAll("_", " ")}</span>
         <span>Attempt {nodePayload.attemptCount + 1}</span>
       </div>
+      <p className="text-sm leading-6 text-slate-600">
+        Commit to your next move. You can think carefully, revise, and keep the lesson path moving.
+      </p>
 
       {hasChoices ? (
         <div className="grid gap-3">
           {content.choices?.map((choice) => (
             <label
               key={choice.value}
-              className="flex cursor-pointer items-center gap-3 rounded-2xl border border-slate-200 p-4 hover:border-sky-300"
+              className="flex cursor-pointer items-center gap-3 rounded-[1.5rem] border border-slate-200 p-4 transition hover:border-cyan-300 hover:bg-cyan-50/40"
             >
               <input
                 type="radio"
@@ -102,13 +105,13 @@ export function AnswerInput({ assignmentId, nodePayload }: AnswerInputProps) {
         <input
           value={value}
           onChange={(event) => setValue(event.target.value)}
-          placeholder={content.answerPlaceholder ?? "Type your answer"}
-          className="w-full rounded-2xl border border-slate-200 px-4 py-3 outline-none ring-0 transition focus:border-sky-400"
+          placeholder={content.answerPlaceholder ?? "Write your answer here"}
+          className="w-full rounded-[1.5rem] border border-slate-200 px-4 py-3 outline-none ring-0 transition focus:border-cyan-400"
         />
       )}
 
-      {feedback ? <div className="rounded-2xl bg-emerald-50 p-4 text-sm text-emerald-900">{feedback}</div> : null}
-      {error ? <div className="rounded-2xl bg-rose-50 p-4 text-sm text-rose-900">{error}</div> : null}
+      {feedback ? <div className="rounded-[1.5rem] bg-emerald-50 p-4 text-sm text-emerald-900">{feedback}</div> : null}
+      {error ? <div className="rounded-[1.5rem] bg-rose-50 p-4 text-sm text-rose-900">{error}</div> : null}
 
       {isUngradedStep ? (
         <button
@@ -116,15 +119,15 @@ export function AnswerInput({ assignmentId, nodePayload }: AnswerInputProps) {
           disabled={pending}
           className="rounded-full bg-slate-950 px-5 py-3 font-medium text-white transition hover:bg-slate-800 disabled:opacity-60"
         >
-          {pending ? "Advancing..." : content.ctaLabel ?? "Continue"}
+          {pending ? "Moving onward..." : content.ctaLabel ?? "Continue"}
         </button>
       ) : (
         <button
           onClick={submit}
           disabled={pending || (!value && !hasChoices)}
-          className="rounded-full bg-accent px-5 py-3 font-medium text-white transition hover:bg-sky-600 disabled:opacity-60"
+          className="rounded-full bg-accent px-5 py-3 font-medium text-white transition hover:bg-cyan-600 disabled:opacity-60"
         >
-          {pending ? "Checking..." : "Submit answer"}
+          {pending ? "Checking your thinking..." : "Submit answer"}
         </button>
       )}
     </div>

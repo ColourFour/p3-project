@@ -8,15 +8,26 @@ export default async function StudentDashboardPage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-[2rem] bg-white p-8 shadow-card">
-        <p className="text-sm uppercase tracking-[0.25em] text-sky-700">Student dashboard</p>
+      <section className="rounded-[2.5rem] border border-white/70 bg-white/90 p-8 shadow-card backdrop-blur">
+        <p className="text-sm uppercase tracking-[0.32em] text-cyan-700">Your lesson map</p>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-950">
           Welcome back, {auth.profile.display_name}
         </h1>
-        <p className="mt-3 max-w-3xl text-slate-600">
-          Your assigned units stay pinned to a published version, so the lesson path stays stable
-          while teachers monitor where support is needed.
+        <p className="mt-3 max-w-3xl text-lg leading-8 text-slate-600">
+          Today&apos;s work is ready. Pick up where you left off, build your understanding step by
+          step, and keep moving toward the next checkpoint.
         </p>
+        <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-600">
+          <span className="rounded-full bg-cyan-50 px-4 py-2 font-medium text-cyan-800">
+            Follow the path
+          </span>
+          <span className="rounded-full bg-amber-50 px-4 py-2 font-medium text-amber-800">
+            Use support when needed
+          </span>
+          <span className="rounded-full bg-rose-50 px-4 py-2 font-medium text-rose-800">
+            Finish strong at the boss
+          </span>
+        </div>
       </section>
 
       <section className="grid gap-5 lg:grid-cols-2">
