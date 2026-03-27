@@ -80,7 +80,7 @@ export function AnswerInput({ assignmentId, nodePayload }: AnswerInputProps) {
         <span>Attempt {nodePayload.attemptCount + 1}</span>
       </div>
       <p className="text-sm leading-6 text-slate-600">
-        Commit to your next move. You can think carefully, revise, and keep the lesson path moving.
+        Make your next move. Think carefully, commit to an answer, and keep the challenge alive.
       </p>
 
       {hasChoices ? (
@@ -119,7 +119,7 @@ export function AnswerInput({ assignmentId, nodePayload }: AnswerInputProps) {
           disabled={pending}
           className="rounded-full bg-slate-950 px-5 py-3 font-medium text-white transition hover:bg-slate-800 disabled:opacity-60"
         >
-          {pending ? "Moving onward..." : content.ctaLabel ?? "Continue"}
+          {pending ? "Advancing the run..." : content.ctaLabel ?? "Continue"}
         </button>
       ) : (
         <button
@@ -127,7 +127,7 @@ export function AnswerInput({ assignmentId, nodePayload }: AnswerInputProps) {
           disabled={pending || (!value && !hasChoices)}
           className="rounded-full bg-accent px-5 py-3 font-medium text-white transition hover:bg-cyan-600 disabled:opacity-60"
         >
-          {pending ? "Checking your thinking..." : "Submit answer"}
+          {pending ? "Checking your move..." : "Lock in answer"}
         </button>
       )}
     </div>

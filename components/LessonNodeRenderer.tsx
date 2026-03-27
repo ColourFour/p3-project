@@ -52,8 +52,8 @@ export function LessonNodeRenderer({
             </h1>
             <p className={`mt-3 max-w-2xl text-sm leading-6 ${isBossNode ? "text-rose-50" : "text-slate-500"}`}>
               {isBossNode
-                ? "This is the culminating turn in the lesson path. Slow down, connect the ideas, and choose with confidence."
-                : "Read carefully, look for the key idea, and use the route in front of you to keep building understanding."}
+                ? "This is the culmination of the run. Slow down, connect the ideas, and make the move that proves you understand what you built."
+                : "Read carefully, look for the key idea, and treat this step as one more win on the route to mastery."}
             </p>
           </div>
           {nodePayload.node.mastery_tags?.length ? (
@@ -82,7 +82,7 @@ export function LessonNodeRenderer({
           <p className="mt-3 text-sm leading-6 text-slate-200">
             {isBossNode
               ? "You have reached the lesson boss. Pull together the patterns you noticed earlier and use them deliberately."
-              : "Stay with the current idea. Each step is meant to sharpen one piece of understanding before the route continues."}
+              : "Stay with the current idea. Momentum comes from solving one meaningful piece cleanly before the route continues."}
           </p>
         </div>
         <div className="rounded-[2rem] border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950 shadow-card">
@@ -91,8 +91,8 @@ export function LessonNodeRenderer({
           </div>
           <p className="mt-2">
             {isBossNode
-              ? "Boss nodes are meant to feel different. This is the point where separate steps become one connected idea."
-              : "Hints, examples, and checkpoints are part of the route. Using them is progress, not a detour."}
+              ? "Boss nodes are meant to feel different. This is where separate steps become one connected challenge."
+              : "Hints, examples, and checkpoints are part of the route. Using them keeps your momentum alive."}
           </p>
         </div>
         <AnswerInput assignmentId={assignmentId} nodePayload={nodePayload} />

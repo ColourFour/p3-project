@@ -30,7 +30,7 @@ export function StudentProgressCard({ assignment }: { assignment: AssignmentList
         </span>
       </div>
       <p className="mt-4 text-sm leading-6 text-slate-500">
-        Keep going through the next step in the lesson path and build toward the checkpoint ahead.
+        Step back in, win the next move, and keep building toward the checkpoint ahead.
       </p>
       <div className="mt-5 grid gap-3 text-sm text-slate-600 sm:grid-cols-3">
         <div>

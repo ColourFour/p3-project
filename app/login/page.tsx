@@ -22,32 +22,33 @@ export default function LoginPage() {
   return (
     <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
       <section className="overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950 p-10 text-white shadow-card">
-        <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">Welcome to the lesson path</p>
+        <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">Welcome to the lesson quest</p>
         <h1 className="mt-4 max-w-2xl text-5xl font-semibold tracking-[-0.04em]">
-          Algebra, but framed like a journey students can actually feel.
+          Algebra works better when students want to keep going.
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
-          Step into a prototype where each choice opens the next part of the lesson, support arrives
-          when it is useful, and the final challenge feels earned.
+          This prototype turns a lesson into a guided challenge run. Students build momentum, recover
+          from mistakes without losing the thread, and push toward a final boss that asks them to use
+          what they have really learned.
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           <div className="rounded-[1.75rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">Discover</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">Launch</p>
             <p className="mt-3 text-sm leading-6 text-slate-200">
-              Start with a clear prompt and a sense of where the lesson is taking you.
+              Start with a clear objective and an immediate sense that the lesson is going somewhere.
             </p>
           </div>
           <div className="rounded-[1.75rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">Adjust</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">Recover</p>
             <p className="mt-3 text-sm leading-6 text-slate-200">
-              When thinking goes sideways, the route bends toward examples and recovery.
+              When thinking slips, the route bends into support without collapsing the feeling of progress.
             </p>
           </div>
           <div className="rounded-[1.75rem] border border-white/10 bg-white/10 p-5 backdrop-blur">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rose-200">Conquer</p>
             <p className="mt-3 text-sm leading-6 text-slate-200">
-              Finish with a boss moment that asks students to connect the ideas they built.
+              Finish with a boss challenge that makes the lesson feel earned, not merely completed.
             </p>
           </div>
         </div>
@@ -57,8 +58,9 @@ export default function LoginPage() {
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-amber-700">Choose an entry point</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">Open the prototype</h2>
         <p className="mt-3 text-sm leading-7 text-slate-600">
-          Each role opens a working view of the same lesson world. Pick the perspective you want to
-          share, test, or walk through.
+          Pick the perspective you want to experience. The student views show the lesson as a live
+          challenge path; the teacher view shows how motivation and difficulty are playing out across
+          the room.
         </p>
 
         <div className="mt-8 space-y-4">
@@ -84,8 +86,9 @@ export default function LoginPage() {
         </div>
 
         <div className="mt-8 rounded-[1.75rem] border border-amber-200 bg-amber-50 p-5 text-sm leading-7 text-amber-950">
-          A good lesson prototype should invite exploration quickly. These demo entrances are here
-          so you can move straight into the student and teacher experience without setup friction.
+          The central design idea here is simple: motivation matters. If students feel momentum,
+          curiosity, and a reason to finish the next step, the mathematics has a much better chance
+          of sticking.
         </div>
       </section>
     </div>
